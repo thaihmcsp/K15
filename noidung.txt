@@ -1,0 +1,91 @@
+npm init
+
+tair express
+
+require
+
+khởi tạo app
+
+cho 1 cổng để nhận request, gửi response
+
+app.get('đường dẫn', fun(request,response){
+  response.send('asdasdasd')
+})
+
+response                        phản hồi từ server => client
+
+res.send()
+
+res.download
+
+res.sendFile
+
+res.json()
+======================================
+
+request                             yêu cầu từ client => server
+query                               gửi data trên đường dẫn về server
+                                    path?key=value&key2=value2
+                                    query có hay không thì vẫn gửi request vào path
+
+req.query                           bắt query gửi về
+
+params                              gửi data trên đường dẫn được quy định về server 
+                                    path/:key
+                                    đã quy định dùng params thì buộc phải dùng thì mới gửi request vào path/:key
+
+req.params                          bắt params gửi về
+
+express.static                      gửi 1 folder ra ngoài để tiện truy cập
+
+router                              phân luồng hoạt động
+                                    thông thường phân luồng theo dataBase
+
+router = express.Router()           tạo router
+
+app.use(path,router)                liên kết router vs app
+
+==================================================
+restful API
+
+get               gửi giao diện
+                  lấy data
+
+post              thêm data
+
+put               update data
+
+delete            xóa data
+
+path              tường minh tên bảng trên đường dẫn
+                  nếu tương tác với 1 data cụ thể thì phải tường minh id
+
+put     /user/:id update 1 user cụ thể
+get     /user/:id lấy data 1 user cụ thể
+
+delete  /class/:id  xóa 1 class cụ thể
+
+async - await             xử lý promise, biến promise chạy đồng bộ bên trong function async
+
+async function (){
+  try{
+    await promise
+  }catch(err){
+    xử lý err
+  }
+}
+
+========================================================
+
+$.ajax                    gửi request từ client về server và trả ra 1 promise
+                          promise sẽ nhận phản hồi từ server
+                          ajax vừa gửi request vừa nhận response
+
+gửi data về server
+
+query, params, headers    request nào cũng có thể gửi đc
+
+body                      POST, PUT, DELETE gửi đc
+
+express.urlendcoded({extended:true})
+express.json()

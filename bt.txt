@@ -1,0 +1,27 @@
+dùng param, query và express, mongoose, jquery
+tạo bảng user có username, password
+1, tạo đường dẫn tìm kiếm user theo tên trên query
+  tạo giao diện có input để nhập username và button search
+  dùng ajax để API trên và hiển thị user tìm được lên giao diện web
+
+2, tạo đường dẫn tìm kiếm user theo id trên param
+  tạo giao diện có input nhập userID và button search
+  dùng ajax để API trên và hiển thị user tìm được lên giao diện web
+
+3, tạo đường dẫn update password cho user theo id truyền qua param và password mới truyền qua query
+  tạo giao diện có input userID, input username, input password, input newpassword và button click
+  khi click button thì request vào API vừa tạo để đổi password
+
+4, tạo đường dẫn thêm mới user theo các thông tin truyền trên query
+  tạo giao diện có input user, input password và button tạo tk
+  khi click button thì gửi request vào API vừa tạo để tạo user
+  chỉ tạo user mới nếu username chưa bị sử dụng
+
+5, tạo đường dẫn xóa user theo id truyền qua params
+  tạo giao diện có input id và button click
+  khi click button thì chạy API trên để kiểm tra user và xóa tài khoản
+
+6, tạo API trả về số lượng data trong user theo yêu cầu trên query (.limit mongoose)
+  tạo giao diện có input number và button click
+  khi click button thì trả ra số lượng data trong input và hiển thị lên giao diện
+  VD nhập 10 thì trả về 10 user đầu tiên trong bảng user
